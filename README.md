@@ -21,14 +21,21 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Builds the production version of storybook under `storybook-static` folder.<br />
 
+## SCSS and CSS modules
+
+Both SCSS and CSS modules are enabled.<br />
+In order to use CSS modules with storybook, you will need to add `.module.scss` suffix to your SCSS file.
+Example can be seen in [Input.module.scss](src/stories/2-Input/Input.module.scss)
+
 ## Utils
 
 ### searchBooks
 
-searchBooks is the async function you have to call to get books search results
+Calling `searchBooks` will trigger the API call to IT Bookstore API to search for books.
+In order to be able to use the API you will need CORS extension in your browser.
 
 Example:
-```
+```js
 // autocompleteValue is set by input
 const [autocompleteValue, setAutocompleteValue] = useState('');
 const [results, setResults] = useState([]);
@@ -47,5 +54,5 @@ useEffect(() => {
 
 ### useDecoratedChangeHandler
 
-This function is decorating your `onChange` handler so it logs the value in Storybook console.
+Calling `useDecoratedChangeHandler` with your `onChange` handler as parameter will decorate your handler so it logs the value in the Storybook console.
 Example can be seen in [Input.stories.jsx](src/stories/2-Input/Input.stories.jsx)

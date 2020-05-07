@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const propTypes = {
   value: PropTypes.string.isRequired,
@@ -7,18 +7,8 @@ const propTypes = {
   className: PropTypes.string.isRequired,
 };
 
-export default function Input({
-  value,
-  onChange,
-  className,
-}) {
-  return (
-    <input
-      value={value}
-      onChange={onChange}
-      className={className}
-    />
-  );
+export default function Input({ value, onChange, className }) {
+  return <input value={value} onChange={onChange} className={className} />;
 }
 
 Input.propTypes = propTypes;

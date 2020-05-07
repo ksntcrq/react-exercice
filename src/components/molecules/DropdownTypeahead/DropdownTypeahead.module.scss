@@ -1,9 +1,11 @@
 .dropdown-typeahead-wrapper {
     position: relative;
+    width: 100%;
 }
 
 .input-wrapper {
     position: relative;
+    width: 100%;
 
     .clear-button {
         position: absolute;
@@ -15,6 +17,10 @@
 
 .results-wrapper {
     position: absolute;
+    margin-top: 5px;
     top: 100%;
     width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
 }

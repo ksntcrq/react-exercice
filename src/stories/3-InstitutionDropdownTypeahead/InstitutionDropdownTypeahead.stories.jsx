@@ -1,14 +1,15 @@
-import React from 'react';
-import InstitutionDropdownTypeahead
-    from '../../components/organisms/InstitutionDropdownTypeahead/InstitutionDropdownTypeahead';
+import React from "react";
+import InstitutionDropdownTypeahead from "../../components/organisms/InstitutionDropdownTypeahead/InstitutionDropdownTypeahead";
 
 export default {
-    title: 'InstitutionDropdownTypeahead',
-    component: InstitutionDropdownTypeahead,
+  title: "InstitutionDropdownTypeahead",
+  component: InstitutionDropdownTypeahead,
 };
 
 export const TextInstitutionDropdownTypeahead = () => {
-    return (
-        <InstitutionDropdownTypeahead />
-    );
+  return (
+    <div style={{ width: 400 }}>
+      <InstitutionDropdownTypeahead />
+    </div>
+  );
 };

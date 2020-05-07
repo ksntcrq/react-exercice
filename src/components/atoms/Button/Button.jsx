@@ -10,12 +10,12 @@ const propTypes = {
 
 export default function Button({
   type = "button",
-  onChange,
+  onClick,
   className,
   children,
 }) {
   return (
-    <button type={type} onChange={onChange} className={className}>
+    <button type={type} onClick={onClick} className={className}>
       {children}
     </button>
   );

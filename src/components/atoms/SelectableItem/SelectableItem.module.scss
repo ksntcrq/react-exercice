@@ -1,0 +1,12 @@
+.item {
+    padding: 5px;
+    cursor: pointer;
+
+    &.highlighted {
+        background-color: lightblue;
+    }
+
+    &:hover {
+        font-weight: bold;
+    }
+}

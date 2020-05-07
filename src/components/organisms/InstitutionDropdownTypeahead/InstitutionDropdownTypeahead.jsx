@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DropdownTypeahead from "../../molecules/DropdownTypeahead/DropdownTypeahead";
+import SelectableInstitution from '../../molecules/SelectableInstitution/SelectableInstitution';
 
 function InstitutionDropdownTypeahead() {
   const [autocompleteValue, setAutocompleteValue] = useState("");
@@ -7,44 +8,49 @@ function InstitutionDropdownTypeahead() {
 
   useEffect(() => {
     if (autocompleteValue.trim().length === 3) {
-      setResults([
+      return setResults([
         {
           id: 1,
-          name: 'Hello',
+          name: 'Hoi',
+          countryName: 'Oui oui',
         },
         {
           id: 2,
-          name: 'Ho no',
+          name: 'Moi',
         },
       ])
     }
     if (autocompleteValue.trim().length === 4) {
-      setResults([])
+      return setResults([])
     }
     if (autocompleteValue.trim().length > 4) {
-      setResults([
+      return setResults([
         {
           id: 4,
-          name: 'Hoi',
+          name: 'Holaa',
+          countryName: 'Nope',
         },
         {
           id: 6,
-          name: 'Hono',
+          name: 'Honooo',
         },
         {
           id: 10,
-          name: 'Hoooono',
+          name: 'Hooyes',
         },
       ])
     }
+    return setResults([]);
   }, [autocompleteValue, setResults]);
 
   return (
     <DropdownTypeahead
       onSearch={setAutocompleteValue}
+      searchQuery={autocompleteValue}
       onClear={() => setAutocompleteValue("")}
+      onSelect={(result) => setAutocompleteValue(result.name)}
       results={results}
-      resultComponent={({ result }) => <div>{result.name}</div>}
+      resultComponent={SelectableInstitution}
     />
   );
 }
